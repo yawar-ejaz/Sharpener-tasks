@@ -1,4 +1,6 @@
-import ExpenseItem from "./components/ExpenseItem";
+import ExpenseDetails from "./components/ExpenseDetails";
+import ExpenseDate from "./components/ExpenseDate";
+import "./App.css";
 
 function App() {
   const expenses = [
@@ -11,11 +13,14 @@ function App() {
     <>
       <h1>My expenses here</h1>
       {expenses.map((e) => (
-        <ExpenseItem
-          itemName={e.itemName}
-          price={e.price}
-          location={e.location}
-        />
+        <p key={Math.random()} className="item">
+          <ExpenseDate />
+          <ExpenseDetails
+            itemName={e.itemName}
+            price={e.price}
+            location={e.location}
+          />
+        </p>
       ))}
     </>
   );
