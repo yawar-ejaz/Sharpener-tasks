@@ -1,11 +1,12 @@
 import React from "react";
+import "./ExpenseItem.css"
 
-const ExpenseItem = ({ itemName = "item", price = 0 }) => {
+const ExpenseItem = ({ itemName = "item", price = 0, location = "Kolkata" }) => {
   return (
     <div>
-      <h2>
-        {itemName} {price}
-      </h2>
+      <p className="item">
+              {itemName} { location } {price}
+      </p>
     </div>
   );
 };
